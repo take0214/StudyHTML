@@ -1,0 +1,25 @@
+li {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sub_text {
+    font-size: 10px;
+}
+
+#list3 {
+    color: red;
+}
+
+.sample_text:last-child {
+    color: cyan;
+}
+
+.sample_text:nth-child(2) {
+    color: magenta;
+}
+
+#sample_button:hover {
+    color: white;
+    background-color: blue;
+}
