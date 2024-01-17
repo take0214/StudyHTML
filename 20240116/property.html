@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<head>
+    <title>CSSプロパティ</title>
+    <link rel="stylesheet" href="./property.css" type="text/css">
+</head>
+
+<body>
+    <h1>font</h1>
+    fontプロパティの一覧<br>
+    <ul>
+        <li>
+            font-size(必須)
+        </li>
+        <li>
+            font-family(必須)
+            フォントファミリー名か総称フォント名(明朝体、ゴシック体など)を指定できる<br>
+            総称フォント名は引用符(")では囲わない
+        </li>
+        <li>
+            font-style
+            nomal, italic, obliqueのような文字のスタイル
+        </li>
+        <li>
+            font-variant
+            フォントの変化形を設定できる
+        </li>
+        <li>
+            font-weight
+            bold, lighterなど文字の太さに関する指定
+        </li>
+        <li>
+            font-stretch
+        </li>
+        <li>
+            line-height
+            行間。font-sizeの直後に16px/3のように指定
+        </li>
+    </ul>
+    fontを一括指定する場合、font-style, font-variant, font-weightはfont-sizeよりも前に書かないといけない。<br>
+    font-familyは指定される最後の値である必要がある。
+
+    
+    <p id="sample_text_01">サンプルテキスト１</p>
+    <p id="sample_text_02">Sample text 2</p>
+    <p id="sample_text_03">Sample text 3</p>    
+
+    <br>
+
+    <h1>margin</h1>
+    周囲のオブジェクトとの間隔を指定する。<br>
+    （1件）margin: 上 右 下 左 <br>
+    （2件）margin: 上 左右 下 <br>
+    （3件）margin: 上下 左右  <br>
+    （4件）margin: 全方位 <br>
+    <div id="sample_object_01">
+        ブロック１
+    </div>
+    <div id="sample_object_02">
+        ブロック２
+    </div>
+    <div id="sample_object_03">
+        ブロック３
+    </div>
+
+    <h1>padding</h1>
+    ブロックの境界とコンテンツの間の間隔を指定する。<br>
+    <div id="sample_object_04" class="padding_sample">
+        ブロック4 <br>
+        ブロック4 <br>
+        ブロック4 <br>
+    </div>
+    <div id="sample_object_05" class="padding_sample">
+        ブロック5 <br>
+        ブロック5 <br>
+        ブロック5 <br>
+    </div>
+    <div id="sample_object_06" class="padding_sample">
+        ブロック6 <br>
+        ブロック6 <br>
+        ブロック6 <br>
+    </div>
+
+    <h1>display</h1>
+    ブロック要素とインライン要素のどちらで扱うかを指定する。 <br>
+    例：ABCD
+    <div id="sample_object_07">
+        EFG
+    </div>
+    HIJK
+
+    <br>
+
+    <h1>overflow</h1>
+    <div id="overflow_sample">
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+        サンプルテキスト <br>
+    </div>
+
+    <br>
+
+</body>

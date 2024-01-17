@@ -1,0 +1,56 @@
+#sample_text_01 {
+    font: italic bold 22px serif;
+}
+
+#sample_text_02 {
+    font: italic lighter small-caps 30px/4 "times";
+}
+
+#sample_text_03 {
+    font: 30px system-ui;
+}
+
+#sample_object_01 {
+    background-color: aqua;
+}
+
+#sample_object_02 {
+    background-color: greenyellow;
+    margin: 10px 50px 70px 100px;
+}
+
+#sample_object_03 {
+    background-color: aqua;
+}
+
+.padding_sample {
+    background-color: orange;
+    text-align: center;
+    margin: 5px;
+    display:inline-block
+}
+
+#sample_object_04 {
+    
+    padding: 10px 50px 70px 100px;
+}
+
+#sample_object_05 {
+    padding: 10px 100px;
+}
+
+#sample_object_06 {
+    padding: 20px;
+}
+
+#sample_object_07 {
+    background-color: red;
+    display: inline;
+}
+
+#overflow_sample {
+    outline: auto;
+    overflow: scroll;
+    height: 100px;
+    width: 300px;
+}
