@@ -1,0 +1,12 @@
+#displayArea {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px;
+    border-style: dashed;
+    border-color: black;
+    display: inline-block;
+}
+
+#textbox{
+    width: 18px;
+}
