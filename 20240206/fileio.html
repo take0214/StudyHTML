@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <title>Javaチェックリスト</title>
+</head>
+
+<body>
+    <h2>ファイル入出力（Java）</h2>
+    <h3>ファイルに入出力する方法</h3>
+    FileWriterクラス（書き込むファイルを指定する）と<br>
+    PrintWriterクラス（ファイルへの書き込み操作）を使う。<br>
+    <pre><code>
+    FileWriter file = new FileWriter("{ファイルパス}");
+    PrintWriter pw = new PrintWriter(new BufferedWriter(file));     
+
+    //ファイルへの書き込み
+    pw.println("{書き込みたい文字列}");
+
+    //ファイルを閉じる
+    pw.close();
+    </code></pre>
+    上書きではなく追記にしたいときは引数にtrue入れる。
+    <pre><code>
+    FileWriter file = new FileWriter(“ファイル名”, true);       
+    </code></pre>
+
+    <h3>バイナリデータの書き込み</h3>
+    BufferedOutputStreamクラス、FileOutputStreamなどを使用する。
+    <pre><code>
+    BufferedOutputStream bf = new BufferedOutputStream
+            (new FileOutputStream("{ファイルパス}"));
+        
+    //ASCIIコードを書き込む
+    byte b1 = 74; //ASCII：(J)
+    byte b2 = 65; //ASCII：(A)
+    byte b3 = 86; //ASCII：(V)
+    byte b4 = 65; //ASCII：(A)
+    
+    bf.write(b1);
+    bf.write(b2);
+    bf.write(b3);
+    bf.write(b4);
+    
+    //ファイルに書き込む
+    bf.flush();
+    
+    //ファイルをクローズする
+    bf.close();
+    </code></pre>
+
+    <h3>ファイルの読み込み</h3>
+    Filesクラス、FileReaderクラス、<br>
+    FileInputStreamクラスなどを使う。
+
+    <pre><code>
+    Path path = Paths.get("test.txt");
+    String content = Files.readString(path);
+
+    // コンソールにファイルの中身が出力される。     
+    System.out.println(content);
+    </code></pre>
+    <pre><code>
+    File file = new File("test.txt");
+			
+	if (file.exists()) {
+		FileReader fr = new FileReader(file);
+
+        // BufferedReaderを使うことで一行ずつ読み込める
+		BufferedReader br = new BufferedReader(fr);    
+		String content;
+		while ((content = br.readLine()) != null) {
+			System.out.println(content);
+		}
+		br.close();
+	}
+    </code></pre>
+    <br>
+
+    <h3>補足</h3>
+    ファイルが存在しない場合などにエラーになるので<br>
+    実際に使うときはtry/catchで囲うなど対策が必要。<br>
+    <br>
+    FileReader単体だと1文字ずつしか読み込めないのでBufferedReaderを使う。<br>
+    <br>
+    FileWriterは\nなどの改行コードを書き込む必要があり、<br>
+    環境によってうまく動作しなかったりするので、<br>
+    BufferedWriterクラスで用意されている"newLine"メソッドを使うなど対策が必要。<br>
+    <br>
+
+    <b>などなど、実施に使う時に考慮すべきことやその対策がある。</b>
+
+
+
+
+
+
+
+    
+</body>
+
+</html>

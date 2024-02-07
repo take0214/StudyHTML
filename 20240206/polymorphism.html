@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ポリモーフィズム</h1>
+    多様性というような意味で、一つの概念的なクラスを継承して別のクラスを作ること。<br>
+    例：車クラスを継承してパトカークラス、消防車クラスを作る<br>
+    <br>
+    メリット：<br>
+    ・同じメソッドを持ったクラスを複数作らなくてもよくなる。<br>
+    ・下記のList型の例のように、インスタンスの型を継承元に統一できる。<br>
+    <pre><code>
+        List&lt;String> = new ArrayList&lt;String>();     
+    </code></pre>
+
+    <br>
+    <b>抽象メソッド：それ自体は中身（機能）を持たない空メソッド</b><br>
+    <b>抽象クラス：抽象メソッドを含んだクラス</b><br>
+    <br>
+    "abstract"をつけて宣言する<br>
+    抽象クラスを継承するクラスは継承する抽象クラスの抽象メソッドを<br>
+    全てオーバーライドしなければいけない。<br>
+    <br>
+    <b>インターフェース</b><br>
+    配下メソッドが全部抽象メソッドであるクラス。<br>
+    抽象クラスと違って全てのメソッドをオーバーライドする必要がなく、<br>
+    必要なメソッドだけ扱うことができる。<br>
+    多重継承ができる。<br>
+
+
+
+</body>
+</html>
