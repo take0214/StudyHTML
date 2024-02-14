@@ -1,0 +1,20 @@
+p#p1 {
+    color: green;
+    border: medium solid;
+}
+
+p#p2 {
+    color: green;
+    border: medium solid;
+}
+em#em2 {
+    border: inherit;
+}
+
+p#p3 {
+    color: green;
+    border: medium solid;
+}
+em#em3 {
+    border: dashed;
+}
